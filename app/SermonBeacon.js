@@ -12,8 +12,8 @@ var app = angular.module('sermonBeacon', [
   'ui.bootstrap'
 ]);
 
-app.constant('URI', 'http://sbapiprod-30386.onmodulus.net/api/');
-//app.constant('URI', 'http://localhost:3000/api/');
+app.constant('URI', 'https://sermonapitest.herokuapp.com/api/');
+// app.constant('URI', 'http://localhost:3000/api/');
 
 app.config(function ($httpProvider, $stateProvider, $urlRouterProvider) {
   $stateProvider
