@@ -1,0 +1,228 @@
+html {
+    border: 10px solid #f5ead9;
+}
+
+html, body {
+    height: auto;
+    min-height: 100% !important;
+}
+
+body {
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    padding: 10px;
+    background: url(../img/bg-blue.jpg);
+}
+
+body.loading {
+    overflow: hidden;
+}
+
+body.loading .modal {
+    display: block;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(245, 234, 217, .8) url(../img/loader.gif) 50% 50% no-repeat;
+}
+
+
+input:focus, textarea {
+    outline: none !important;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box !important;
+}
+
+.navbar-clear {
+    background: rgb(255, 255, 255); /* Fall-back for browsers that don't support rgba */
+    background: rgba(255, 255, 255, 0);
+}
+
+.navbar-clear a,
+.navbar-clear button {
+    color: #f5ead9;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-clear button {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.navbar-clear .icon-bar {
+    background-color: #f5ead9;
+}
+
+.navbar-clear a:hover.brown,
+.navbar-clear button:hover.brown {
+    color: #331F18;
+}
+
+.navbar-clear .nav > li > button:hover,
+.navbar-clear .nav > li > a:hover,
+.navbar-clear .nav > li > button:focus,
+.navbar-clear .nav > li > a:focus {
+    text-decoration: none;
+    background: rgba(245, 234, 217, .6);
+}
+
+#header {
+    margin-left: 10px;
+}
+
+a.view {
+    color: #333;
+}
+
+a.view:hover, a.view:focus {
+    color: #333;
+}
+
+.form-signin {
+    min-height: 200px;
+    max-width: 100%;
+    line-height: 1.428571429;
+    background-image: url(../img/note-blank.png);
+    width: 360px;
+    height: 220px;
+    padding: 20px;
+    margin: 80px auto 20px;
+    background-repeat: no-repeat;
+    background-position: top left;
+    position: relative;
+}
+
+.form-signin button {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.form-signin button:hover {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.form-signin .large {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.new-sermon-form {
+    top: 0;
+    right: 5px;
+    position: fixed;
+    width: 49.6%;
+}
+
+.form-signin input[type=text],
+.form-signin input[type=email],
+.form-signin input[type=password],
+.create textarea {
+    color: #a69f95;
+    border: 1px solid #d7cebf;
+    width: 100%;
+    resize: none;
+    background-color: #f5ead9;
+    margin-bottom: 5px;
+}
+
+.ng-invalid button {
+    color: #999999;
+    background: rgb(255, 255, 255) !important; /* Fall-back for browsers that don't support rgba */
+    background: rgba(255, 255, 255, 0) !important;
+}
+
+.edit input[type=text] {
+    border: 1px solid #f5f5f5;
+    width: 100%;
+    resize: none;
+    background-color: #f5f5f5;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.edit input[type=text]:hover,
+.edit input[type=text]:focus {
+    border: 1px solid #e3e3e3;
+    outline: none
+}
+
+.xlarge {
+    font-size: 36px;
+    font-weight: bold;
+    color: inherit;
+}
+
+.large {
+    font-size: 30px;
+    font-weight: bold;
+    color: inherit;
+}
+
+.medium {
+    font-size: 24px;
+    font-weight: bold;
+    color: inherit;
+}
+
+.x-small {
+    font-size: 11px;
+}
+
+.red {
+    color: #d9534f;
+}
+
+.k-datetimepicker, .k-datepicker {
+    width: 100%;
+}
+
+.k-picker-wrap, .k-input {
+    height: 34px !important;
+}
+
+.dateForm {
+    height: 80px;
+
+}
+
+.search-bar {
+    min-height: 150px;
+}
+
+.search-form .glyphicon {
+    top: 0;
+}
+
+.search-form .glyphicon-search:hover {
+    background-color: #b6bdca;
+    cursor: pointer;
+}
+
+.date {
+  width: 271px !important;
+  margin: 0 auto;
+}
+
+select.query {
+    width: 85%;
+}
+
+.archives {
+    height: 35em;
+    overflow: auto;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="embedSingleBeacon">
+<head>
+    <title>Sermon Beacon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
+
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="assets/css/embed.css" rel="stylesheet"/>
+</head>
+<body ng-controller="EmbedDetails" id="top">
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul ng-if="!isPreview" class="nav navbar-nav">
+            <li>
+                <a class="brown" href="{{embedUrl}}">Back to Sermons</a>
+            </li>
+        </ul>
+    </div>
+    <h3 class="text-center">{{sermon.title}} - {{sermon.date | date: 'M/dd/yyyy'}}</h3>
+    <h4 class="text-center">{{sermon.speaker}}</h4>
+
+    <jwplayer id="myplayer" setup="options" files="sermon.files">
+    </jwplayer>
+
+    <script type="text/javascript" src="jwplayer/jwplayer.js" ></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-sanitize.min.js"></script>
+
+    <script src="https://cdn.firebase.com/js/client/1.0.11/firebase.js"></script> 
+    <script src="https://cdn.firebase.com/libs/angularfire/0.7.1/angularfire.js"></script>
+
+    <script src="app/common/models/sermons-model.js"></script>
+    <script src="app/embed/embed-single.js"></script>
+</body>
+</html>

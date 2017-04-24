@@ -1,0 +1,95 @@
+.sermon-list td {
+    vertical-align: middle !important;
+}
+
+.k-datetimepicker, .k-datepicker {
+    width: 100%;
+}
+
+.k-picker-wrap, .k-input {
+    height: 34px !important;
+}
+
+.datePicker {
+    padding: 0 !important;
+}
+
+.search-bar {
+    min-height: 150px;
+}
+
+.search-form .glyphicon-search {
+    top: 0;
+}
+.search-form .glyphicon-search:hover {
+    background-color: #b6bdca;
+    cursor: pointer;
+}
+
+select.query {
+    width: 84%;
+}
+
+.date {
+  width: 271px !important;
+  margin: 0 auto;
+}
+
+#myplayer_wrapper {
+	margin: auto;
+}
+
+iframe {
+	display: block;
+	margin: auto;
+}
+
+
+/* Responsive CSS 
+============================================ */
+/* Tables for Mobile*/
+@media only screen and (max-width: 960px)  {
+
+    /* Force table to not be like tables anymore */
+    table.sermon-list, .sermon-list thead, .sermon-list tbody, .sermon-list th, .sermon-list td, .sermon-list tr { 
+        display: block; 
+    }
+    
+    /* Hide table headers (but not display: none;, for accessibility) */
+    .sermon-list thead tr { 
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    
+    .sermon-list tr { border: 1px solid #ccc; }
+    
+    .sermon-list td { 
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee; 
+        position: relative;
+        padding: 8px 8px 8px 50% !important; 
+        min-height: 38px;
+    }
+    
+    .sermon-list td:before { 
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%; 
+        padding-right: 10px; 
+        white-space: nowrap;
+    }
+    
+    /*
+    Label the data
+    */
+    .sermon-list td:nth-of-type(1):before { content: "Date"; }
+    .sermon-list td:nth-of-type(2):before { content: "Title"; }
+    .sermon-list td:nth-of-type(3):before { content: "Minister"; }
+    .sermon-list td:nth-of-type(4):before { content: "Stream"; }
+    .sermon-list td:nth-of-type(5):before { content: "Download"; }
+}

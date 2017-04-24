@@ -1,0 +1,107 @@
+
+<div class="well">
+    <form class="form-inline">
+        <div class="row">
+            <div class="col-md-6 form-group">
+                <select class="form-control">
+                    <option>2014</option>
+                    <option>2013</option>
+                    <option>2012</option>
+                    <option>2011</option>
+                </select>
+            </div>
+            <div class="col-md-6 form-group">
+                <select class="form-control">
+                    <option>January</option>
+                    <option>February</option>
+                    <option>March</option>
+                    <option>April</option>
+                    <option>May</option>
+                    <option>June</option>
+                    <option>July</option>
+                    <option>August</option>
+                    <option>September</option>
+                    <option>October</option>
+                    <option>November</option>
+                    <option>December</option>
+                </select>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div sermon class="well" ng-repeat="(sermonId, sermonStub) in sermons" sermon-id="{{sermonId}}" ng-click="selectSermon(sermonId, sermon)">
+            <button type="button" class="close" ng-click="removeSermon(sermonId)">&times;</button>
+            <h3>{{sermon.title}}</h3>
+            <p><strong>Subject:</strong> {{sermon.subject}}</p>
+            <p><strong>Speaker:</strong> {{sermon.speaker}}</p>
+            <table class="table edit">
+                <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Url</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="(id, file) in files">
+                    <td><input type="text" ng-model="file.type" ng-blur="updateFile(id)"/></td>
+                    <td><input type="text" ng-model="file.url" ng-blur="updateFile(id)"/></td>
+                    <td>
+                        <a href="#" ng-click="removeFile(id)" class="navbar-link">Remove</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <div class="well">
+                <h4>Add Files</h4>
+                <form class="form-inline" role="form" novalidate ng-submit="addFile()">
+                    <div class="form-group">
+                        <input type="text" class="form-control" ng-model="newFile.type" placeholder="Enter type">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" ng-model="newFile.url" placeholder="Enter URL">
+                    </div>
+                    <button type="submit" class="btn btn-default">Add</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="well">
+            <form role="form" ng-submit="saveSermon()">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" class="form-control" id="title" ng-model="editedSermon.title" placeholder="Enter a title"/>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" class="form-control" id="subject" ng-model="editedSermon.subject" placeholder="Enter a subject"/>
+                </div>
+                <div class="form-group">
+                    <label for="speaker">Speaker</label>
+                    <input type="text" class="form-control" id="speaker" ng-model="editedSermon.speaker" placeholder="Enter a speaker"/>
+                </div>
+                <div class="form-group">
+                    <label for="series">Series</label>
+                    <input type="text" class="form-control" id="series" ng-model="editedSermon.series" placeholder="Enter a series"/>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input id="date" kendo-date-time-picker k-ng-model="obj"
+                           ng-model="editedSermon.date" placeholder="Enter a date" />
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" ng-model="editedSermon.private"> Private
+                    </label>
+                </div>
+                <button type="button" class="btn btn-lg btn-default" ng-click="resetSermon()">Cancel</button>
+                <button type="submit" class="btn btn-lg btn-success pull-right">Save</button>
+            </form>
+        </div>
+    </div>
+</div>
