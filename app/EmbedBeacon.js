@@ -29,4 +29,4 @@ angular.module('firebase').filter('arrayWithDates', function() {
     };
 });
 
-app.constant('URI', 'http://sbapiprod-30386.onmodulus.net/api/');
+app.constant('URI', 'https://sermonapitest.herokuapp.com/api/');
